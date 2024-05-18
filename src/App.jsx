@@ -50,7 +50,7 @@ function App() {
   }, [estagioJogo, listaEscolhida]);
 
   useEffect(() => {
-    if (estagioJogo === estagios[1].nome && listaEscolhida.length > 0 && palavraIndex < listaEscolhida.length) {
+    if (estagioJogo === estagios[0].nome && listaEscolhida.length > 0 && palavraIndex < listaEscolhida.length) {
       limparTodosEstados();
       const { palavra, dica } = listaEscolhida[palavraIndex];
       const letrasPalavra = palavra.split("").map((l) => l.toLowerCase());

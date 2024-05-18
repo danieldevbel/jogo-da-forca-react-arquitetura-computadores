@@ -36,7 +36,7 @@ function App() {
     setListaEscolhida(listaAleatoria);
     setPontuacao(0);
     setPalavraIndex(0);
-    setEstagioJogo(estagios[1].nome); // Alteração para iniciar no estágio do jogo (estágio 2)
+    setEstagioJogo(estagios[0].nome); // Alteração para iniciar no estágio do jogo (estágio 2)
   }, []);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function App() {
 
   useEffect(() => {
     if (estagioJogo === estagios[0].nome && listaEscolhida.length > 0) {
-      setEstagioJogo(estagios[1].nome); // Mudança para o estágio do jogo após a seleção da lista de palavras
+      setEstagioJogo(estagios[0].nome); // Mudança para o estágio do jogo após a seleção da lista de palavras
     }
   }, [estagioJogo, listaEscolhida]);
 

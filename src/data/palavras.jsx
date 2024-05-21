@@ -1,6 +1,7 @@
   export const listasDePalavras = [
     [
       { palavra: "processador", dica: "Realiza Cálculos e Executa Instruções" },
+      { palavra: "processador", dica: "Realiza Cálculos e Executa Instruções" },
       { palavra: "cache", dica: "Memória de Alta Velocidade para Acesso Rápido a Dados" },
       { palavra: "cache", dica: "Memória de Alta Velocidade para Acesso Rápido a Dados" },
       { palavra: "núcleo", dica: "Unidade de Processamento Independente em um Processador" },
@@ -12,6 +13,7 @@
     ],
     [
       { palavra: "memória ram", dica: "Armazena Dados Temporariamente" },
+      { palavra: "memória ram", dica: "Armazena Dados Temporariamente" },
       { palavra: "placa mãe", dica: "Conecta Todos os Componentes do Computador" },
       { palavra: "placa mãe", dica: "Conecta Todos os Componentes do Computador" },
       { palavra: "disco rigido", dica: "Armazena Dados de Forma Permanente" },
@@ -22,6 +24,7 @@
       { palavra: "instruções", dica: "Passos para operação do processador" }
     ],
     [
+      { palavra: "pipeline", dica: "Técnica que Permite a Execução Simultânea de Instruções" },
       { palavra: "pipeline", dica: "Técnica que Permite a Execução Simultânea de Instruções" },
       { palavra: "barramento", dica: "Caminho de comunicação que permite a transferência de dados entre os componentes de um computador" },
       { palavra: "barramento", dica: "Caminho de comunicação que permite a transferência de dados entre os componentes de um computador" },

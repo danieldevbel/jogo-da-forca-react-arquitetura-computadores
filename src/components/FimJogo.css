@@ -2,3 +2,50 @@ h2 span {
     color: #ecfa00;
     font-size: 1.5em;
 }
+
+/* FimJogo.css */
+
+/* FimJogo.css */
+
+.fim-jogo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    background-color: #522ae4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .fim-jogo-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .fim-jogo-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .fim-jogo-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fim-jogo-container button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './App.css';
-import FimJogo from './components/FimJogo';
+import FimJogoGanhou from './components/FimJogoGanhou';
+import FimJogoPerdido from './components/FimJogoPerdido';
 import Jogo from './components/Jogo';
 import TelaInicial from "./components/TelaInicial";
 import { listasDePalavras } from './data/palavras';
@@ -8,7 +9,8 @@ import { listasDePalavras } from './data/palavras';
 const estagios = [
   { id: 1, nome: "inicio" },
   { id: 2, nome: "jogo" },
-  { id: 3, nome: "fim" }
+  { id: 3, nome: "fimPerdido" },
+  { id: 4, nome: "fimGanhou" }
 ];
 
 const qntTentativas = 3;
@@ -47,8 +49,6 @@ function App() {
       setPalavraEscolhida(palavra);
       setDicaEscolhida(dica);
       setLetras(letrasPalavra);
-    } else if (estagioJogo === estagios[2].nome && palavraIndex >= listaEscolhida.length) {
-      setEstagioJogo(estagios[2].nome); // Mudança para o estágio de fim quando todas as palavras forem adivinhadas
     }
   }, [estagioJogo, palavraIndex, listaEscolhida]);
 
@@ -68,7 +68,7 @@ function App() {
   useEffect(() => {
     if (tentativas <= 0) {
       limparTodosEstados();
-      setEstagioJogo(estagios[2].nome);
+      setEstagioJogo(estagios[2].nome); // Estágio final de perda
     }
   }, [tentativas]);
 
@@ -79,7 +79,7 @@ function App() {
       if (palavraIndex + 1 < listaEscolhida.length) {
         setPalavraIndex((atualIndex) => atualIndex + 1); // Avançar para a próxima palavra
       } else {
-        setEstagioJogo(estagios[2].nome); // Mudar para estágio final se não houver mais palavras
+        setEstagioJogo(estagios[3].nome); // Estágio final de vitória
       }
     }
   }, [advinharLetras, letras, palavraIndex, listaEscolhida.length]);
@@ -106,7 +106,8 @@ function App() {
           pontuacao={pontuacao}
         />
       )}
-      {estagioJogo === 'fim' && <FimJogo reiniciar={reiniciar} pontuacao={pontuacao} />}
+      {estagioJogo === 'fimPerdido' && <FimJogoPerdido reiniciar={reiniciar} pontuacao={pontuacao} />}
+      {estagioJogo === 'fimGanhou' && <FimJogoGanhou reiniciar={reiniciar} pontuacao={pontuacao} />}
     </div>
   );
 }

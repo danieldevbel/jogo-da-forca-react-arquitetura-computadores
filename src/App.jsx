@@ -76,9 +76,13 @@ function App() {
     const letrasUnicas = [...new Set(letras)];
     if (advinharLetras.length === letrasUnicas.length && letrasUnicas.length > 0) {
       setPontuacao((atualPontuacao) => atualPontuacao + 100);
-      setPalavraIndex((atualIndex) => atualIndex + 1); // Avançar para a próxima palavra
+      if (palavraIndex + 1 < listaEscolhida.length) {
+        setPalavraIndex((atualIndex) => atualIndex + 1); // Avançar para a próxima palavra
+      } else {
+        setEstagioJogo(estagios[2].nome); // Mudar para estágio final se não houver mais palavras
+      }
     }
-  }, [advinharLetras, letras]);
+  }, [advinharLetras, letras, palavraIndex, listaEscolhida.length]);
 
   const reiniciar = () => {
     setListaEscolhida([]); // Limpar a lista de palavras escolhida
@@ -108,4 +112,3 @@ function App() {
 }
 
 export default App;
-

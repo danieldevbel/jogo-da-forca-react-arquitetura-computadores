@@ -17,7 +17,7 @@
       { palavra: "pipeline", dica: "Técnica que Permite a Execução Simultânea de Instruções" },
       { palavra: "barramento", dica: "Caminho de comunicação que permite a transferência de dados entre os componentes de um computador" },
       { palavra: "mouse", dica: "Dispositivo de Entrada para Controlar o Cursor" },
-      { palavra: "impressora", dica: "Dispositivp de entrada e saída do computador" },
+      { palavra: "impressora", dica: "Dispositivo de entrada e saída do computador" },
       { palavra: "gpu", dica: "Processa e Renderiza Gráficos" },
     ],
     

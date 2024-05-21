@@ -20,7 +20,7 @@ const TelaInicial = ({ iniciarJogo }) => {
           <li><strong>Conceitos de Sistemas Operacionais:</strong> Explore como os sistemas operacionais gerenciam recursos e processos.</li>
         </ul>
         <p>
-          Se você é um entusiasta de tecnologia ou um estudante de ciência da computação, este jogo é uma ótima maneira de revisar
+          Se você é um entusiasta de tecnologia ou um estudante de computação, este jogo é uma ótima maneira de revisar
           e solidificar seus conhecimentos de uma forma divertida e interativa. Está pronto para começar?
         </p>
         <button onClick={iniciarJogo}>Começar Jogo</button>

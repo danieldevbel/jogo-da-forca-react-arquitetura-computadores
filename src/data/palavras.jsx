@@ -12,8 +12,8 @@
     ],
     [
       { palavra: "memória ram", dica: "Armazena Dados Temporariamente" },
-      { palavra: "placa-mãe", dica: "Conecta Todos os Componentes do Computador" },
-      { palavra: "placa-mãe", dica: "Conecta Todos os Componentes do Computador" },
+      { palavra: "placa mãe", dica: "Conecta Todos os Componentes do Computador" },
+      { palavra: "placa mãe", dica: "Conecta Todos os Componentes do Computador" },
       { palavra: "disco rigido", dica: "Armazena Dados de Forma Permanente" },
       { palavra: "disco rigido", dica: "Armazena Dados de Forma Permanente" },
       { palavra: "teclado", dica: "Permite a Entrada de Dados no Computador" },

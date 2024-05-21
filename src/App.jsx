@@ -36,28 +36,18 @@ function App() {
     setListaEscolhida(listaAleatoria);
     setPontuacao(0);
     setPalavraIndex(0);
-    setEstagioJogo(estagios[0].nome); // Alteração para iniciar no estágio do jogo (estágio 2)
+    setEstagioJogo(estagios[1].nome); // Mudança para o estágio do jogo (estágio 2)
   }, []);
 
   useEffect(() => {
-    iniciarJogo(); // Inicia o jogo quando o componente App montar
-  }, []); // Sempre que o componente montar
-
-  useEffect(() => {
-    if (estagioJogo === estagios[0].nome && listaEscolhida.length > 0) {
-      setEstagioJogo(estagios[0].nome); // Mudança para o estágio do jogo após a seleção da lista de palavras
-    }
-  }, [estagioJogo, listaEscolhida]);
-
-  useEffect(() => {
-    if (estagioJogo === estagios[0].nome && listaEscolhida.length > 0 && palavraIndex < listaEscolhida.length) {
+    if (estagioJogo === estagios[1].nome && listaEscolhida.length > 0) {
       limparTodosEstados();
       const { palavra, dica } = listaEscolhida[palavraIndex];
       const letrasPalavra = palavra.split("").map((l) => l.toLowerCase());
       setPalavraEscolhida(palavra);
       setDicaEscolhida(dica);
       setLetras(letrasPalavra);
-    } else if (estagioJogo === estagios[1].nome && palavraIndex >= listaEscolhida.length) {
+    } else if (estagioJogo === estagios[2].nome && palavraIndex >= listaEscolhida.length) {
       setEstagioJogo(estagios[2].nome); // Mudança para o estágio de fim quando todas as palavras forem adivinhadas
     }
   }, [estagioJogo, palavraIndex, listaEscolhida]);
@@ -94,7 +84,7 @@ function App() {
     setListaEscolhida([]); // Limpar a lista de palavras escolhida
     limparTodosEstados(); // Limpar outros estados
     setPalavraIndex(0); // Reiniciar o índice da palavra
-    iniciarJogo(); // Iniciar o jogo novamente
+    setEstagioJogo(estagios[0].nome); // Reiniciar para o estágio inicial
   };
 
   return (
@@ -118,3 +108,4 @@ function App() {
 }
 
 export default App;
+
